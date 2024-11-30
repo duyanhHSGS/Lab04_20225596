@@ -2,7 +2,7 @@ package hust.soict.dsai.aims.store;
 
 import java.util.Vector;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Store {
     private Vector<DigitalVideoDisc> itemsInStore;
