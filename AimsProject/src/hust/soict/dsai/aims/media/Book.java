@@ -12,4 +12,11 @@ public class Book extends Media {
 	public void setAuthors(List<String> authors) {
 		this.authors = authors;
 	}
+	public String toString() {
+	    return "Book - " + getTitle() +
+	           " - " + (getCategory() != null ? getCategory() : "Unknown Category") +
+	           " - " + getAuthors().toString() +
+	           ": " + getCost() + " $";
+	}
+
 }
