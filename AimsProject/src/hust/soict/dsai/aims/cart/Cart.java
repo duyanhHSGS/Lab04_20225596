@@ -1,5 +1,7 @@
 package hust.soict.dsai.aims.cart;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import hust.soict.dsai.aims.media.Media;
 
 public class Cart {
@@ -35,7 +37,7 @@ public class Cart {
 		}
 		return total;
 	}
-
+	
 // implementing print feature:
 	public void print() {
 		System.out.println("***********************CART***********************");
@@ -60,16 +62,35 @@ public class Cart {
 			System.out.println("No media found with ID: " + id);
 		}
 	}
-	public void searchByTitle(String title) {
-		boolean found = false;
+//	public void searchByTitle(String title) {
+//		boolean found = false;
+//		for (Media media : itemsOrdered) {
+//			if (media.getTitle() != null && media.getTitle().equalsIgnoreCase(title)) {
+//				System.out.println("Media Found: " + media);
+//				found = true;
+//			}
+//		}
+//		if (!found) {
+//			System.out.println("No media found with title: " + title);
+//		}
+//	}
+	public Media searchByTitle(String title) {
 		for (Media media : itemsOrdered) {
 			if (media.getTitle() != null && media.getTitle().equalsIgnoreCase(title)) {
 				System.out.println("Media Found: " + media);
-				found = true;
+				return media;
 			}
 		}
-		if (!found) {
-			System.out.println("No media found with title: " + title);
-		}
+		System.out.println("No media found with title: " + title);
+		return null;
+	} // re-implement this, so this returns media instead of void
+	public void sortByTitle() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+	}
+	public void sortByCost() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+	}
+	public void clear() {
+		itemsOrdered.clear();
 	}
 }
