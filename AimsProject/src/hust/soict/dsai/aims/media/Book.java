@@ -5,12 +5,20 @@ import java.util.List;
 
 public class Book extends Media {
 	private List<String> authors = new ArrayList<String>();
-	public Book() {};
 	public List<String> getAuthors() {
 		return authors;
 	}
 	public void setAuthors(List<String> authors) {
 		this.authors = authors;
+	}
+	// comprehensive constructor
+	public Book(String title, String category, float cost, String... authors) {
+	    this.title = title;
+	    this.category = category;
+	    this.cost = cost;
+	    for (String author : authors) {
+	        this.authors.add(author);
+	    }
 	}
 	public String toString() {
 	    return "Book - " + getTitle() +
