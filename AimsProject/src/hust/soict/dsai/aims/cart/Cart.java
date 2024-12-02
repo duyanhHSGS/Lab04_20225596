@@ -6,10 +6,13 @@ public class Cart {
 	public static final int MAX_NUMBER_ORDERED = 20;
 	private ArrayList <Media> itemsOrdered 
 	= new ArrayList<> ( MAX_NUMBER_ORDERED );
-	
 	public void addMedia(Media media) {
 		if (itemsOrdered.size() == MAX_NUMBER_ORDERED) {
 			System.out.println("Cannot add more to cart, your cart is full!");
+			return;
+		}
+		if (itemsOrdered.contains(media)) {
+			System.out.println("Error: Item (" + media.getTitle() + ") already in your cart. Operation failed!");
 			return;
 		}
 		itemsOrdered.add(media);
