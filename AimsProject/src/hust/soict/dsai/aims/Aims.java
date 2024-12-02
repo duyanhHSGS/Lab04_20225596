@@ -1,13 +1,13 @@
 package hust.soict.dsai.aims;
 
-import java.util.Vector;
-
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+//import java.util.Vector;
+//
+//import hust.soict.dsai.aims.cart.Cart;
+//import hust.soict.dsai.aims.media.DigitalVideoDisc;
+//
+//import java.io.BufferedReader;
+//import java.io.FileReader;
+//import java.io.IOException;
 //import java.io.File;
 public class Aims {
     public static void main(String[] args) {
