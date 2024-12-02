@@ -12,6 +12,8 @@ public class Book extends Media {
 		this.authors = authors;
 	}
 	// comprehensive constructor
+	public Book() {
+	}
 	public Book(String title, String category, float cost, String... authors) {
 	    this.title = title;
 	    this.category = category;
