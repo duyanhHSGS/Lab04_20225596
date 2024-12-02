@@ -31,5 +31,13 @@ public abstract class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
-
+	// override the original method 
+	public boolean equals(Object anotherObject) {
+		if (this == anotherObject) return true; // save time
+		if (anotherObject instanceof Media) {
+			Media media = (Media) anotherObject;
+			return this.getTitle().equals(media.getTitle());
+		}
+		return false;
+	}
 }
